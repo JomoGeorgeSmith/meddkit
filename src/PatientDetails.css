@@ -1,0 +1,219 @@
+
+/* Container and Title */
+.patient-details-container {
+    max-width: 100%; /* Ensures it uses full width */
+    padding: 0 20px; /* Add padding for breathing space */
+    box-sizing: border-box;
+}
+
+  
+  .modern-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 30px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Custom Cards */
+  .custom-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  .custom-card-header {
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 1.25rem;
+  }
+  
+  .custom-card-body {
+    padding: 20px;
+    overflow-x: hidden; /* Ensures no horizontal scrolling */
+    box-sizing: border-box; /* Prevents padding from causing overflow */
+    width: 100%; /* Makes sure it fits within the parent container */
+}
+
+.parent-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+@media (max-width: 768px) {
+    .custom-card-body {
+        padding: 10px; /* Adjust padding for smaller screens */
+        overflow-x: hidden;
+    }
+}
+
+
+  /* Inputs and Buttons */
+  .modern-input {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+
+    pointer-events: auto;
+    opacity: 1;
+    background: #fff; /* Ensure background is not transparent */
+    color: #000; /* Ensure text is visible */
+  }
+  
+  .modern-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  .modern-button {
+    border-radius: 30px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .modern-button:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+  }
+
+  .modern-table {
+    width: 100%; /* Ensure the table adjusts to the card's width */
+    table-layout: auto; /* Let table adjust column widths dynamically */
+}
+
+@media (max-width: 768px) {
+    .modern-table th,
+    .modern-table td {
+        font-size: 0.9rem; /* Reduce text size for smaller screens */
+        white-space: normal; /* Allow text wrapping */
+    }
+}
+
+  
+  /* Table */
+  .modern-table th,
+  .modern-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+  }
+  
+  .modern-table th {
+    background-color: #f8f9fa;
+  }
+  
+  /* No Data */
+  .modern-no-data {
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+
+  .icd-icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    max-width: 290px; /* Limits the tooltip's width */
+    word-wrap: break-word; /* Ensures long text wraps */
+    white-space: normal; /* Allow text wrapping */
+    overflow: hidden; /* Ensure no overflow */
+    z-index: 10;
+}
+
+  
+  .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Arrow at the bottom of the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .icd-icon-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+  .icd-icon {
+    color: #007bff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .icd-icon:hover {
+    color: #0056b3;
+  }
+  .tooltip-text {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: left; /* Align text for better readability */
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+
+    bottom: 125%; /* Position the tooltip above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    min-width: 500px; /* Set a maximum width for the tooltip */
+    word-wrap: break-word; /* Enable text wrapping */
+    white-space: normal; /* Allow text wrapping */
+    z-index: 10;
+    font: .8em sans-serif;
+  }
+  
+  .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Arrow at the bottom of the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .icd-icon-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px); /* Adds a slight hover animation */
+  }
+  
+
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1720px !important;
+  }
+
+  @media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1520px;
+    }
+}

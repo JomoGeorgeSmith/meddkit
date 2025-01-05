@@ -1,0 +1,82 @@
+/* Container and Title */
+.patient-list-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .modern-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 30px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Patient Card */
+  .modern-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: none;
+  }
+  
+  .modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .modern-card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .modern-card-text {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .modern-card-button {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .modern-card-button:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* No Patients Message */
+  .modern-no-patients {
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 20px;
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
